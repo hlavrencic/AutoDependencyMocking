@@ -1,10 +1,9 @@
 ﻿using System;
-using AutoDependencyMocking.Components;
 using Ninject.Activation;
 
-namespace AutoDependencyMocking.Providers
+namespace AutoDependencyMocking.Components.Providers
 {
-    public class MockedObjectProvider : IProvider
+    internal class MockedObjectProvider : IProvider
     {
         private readonly IMoqRepository mockRepository;
 

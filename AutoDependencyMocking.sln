@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDependencyMocking", "AutoDependencyMocking\AutoDependencyMocking.csproj", "{6C8717B2-291E-49B7-8BCE-57D814ECBCA4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NugetPackage", "NugetPackage", "{AAEB0CED-B842-4396-8C33-BD55593B5815}"
@@ -11,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NugetPackage", "NugetPackag
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDependencyMocking.Example", "AutoDependencyMocking.Example\AutoDependencyMocking.Example.csproj", "{79891145-F475-4A15-BB66-DD97A50BF78A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoDependencyMocking.Components", "AutoDependencyMocking.Contracts\AutoDependencyMocking.Components.csproj", "{7C860EA6-5731-412F-B3CC-63E4C75C2A02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +30,10 @@ Global
 		{79891145-F475-4A15-BB66-DD97A50BF78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79891145-F475-4A15-BB66-DD97A50BF78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79891145-F475-4A15-BB66-DD97A50BF78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C860EA6-5731-412F-B3CC-63E4C75C2A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C860EA6-5731-412F-B3CC-63E4C75C2A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C860EA6-5731-412F-B3CC-63E4C75C2A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C860EA6-5731-412F-B3CC-63E4C75C2A02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,10 +7,12 @@ namespace AutoDependencyMocking.Components
 {
     public class MoqRepository : IMoqRepository
     {
+        private readonly IDynamicMockFactory moqFactory;
         public IDictionary<Type, Mock> Mocks { get; set; }
 
-        public MoqRepository()
+        public MoqRepository(IDynamicMockFactory moqFactory)
         {
+            this.moqFactory = moqFactory;
             Mocks = new Dictionary<Type, Mock>();
         }
 
@@ -19,22 +21,11 @@ namespace AutoDependencyMocking.Components
             Mock mock;
             if (!Mocks.TryGetValue(type, out mock))
             {
-                mock = DynamicMock(type);
+                mock = moqFactory.DynamicMock(type);
                 Mocks.Add(type, mock);
             }
 
             return mock;
-        }
-
-        private static Mock DynamicMock(Type type)
-        {
-            var constructorInfo = typeof(Mock<>).MakeGenericType(type).GetConstructor(Type.EmptyTypes);
-            if (constructorInfo != null)
-            {
-                return (Mock)constructorInfo.Invoke(new object[] { });
-            }
-
-            throw new NotSupportedException("No se pudo obtener el contructor de Mock");
         }
 
         public void Dispose()
